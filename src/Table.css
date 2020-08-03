@@ -1,0 +1,40 @@
+.table {
+  margin-top: 20px;
+  overflow: scroll;
+  height: 400px;
+  color: #6a5d5d;
+}
+
+.table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table td {
+  padding: 0.5rem;
+}
+
+.table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+/* Hide scrollbar for chrome, safari and opera  */
+.table::-webkit-scrollbar {
+  display: none;
+}
+
+.table {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* .table__flag img {
+  width: 100px;
+  border-radius: 5px;
+}
+.table__flag {
+  height: 10px;
+  width: 15%;
+  background-size: cover;
+  border-radius: 4px;
+} */
