@@ -7,7 +7,7 @@ import {
   CardContent,
 } from "@material-ui/core";
 import "./App.css";
-import { sortData, prettyPrintStat } from "./utils";
+import { sortData, prettyPrintStat } from "../utils";
 import InfoBox from "./InfoBox";
 import Table from "./Table";
 import Map from "./Map";
@@ -62,8 +62,13 @@ const App = () => {
         setCountry(countryCode);
         setCountryInfo(data);
         //console.log(data.countryInfo);
-        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-        setMapZoom(4);
+        if (countryCode === "worldwide") {
+          setMapCenter({ lat: 34.80746, lng: -40.4796 });
+          setMapZoom(3);
+        } else {
+          setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+          setMapZoom(4);
+        }
       });
   };
 
